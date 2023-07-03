@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   path:"user",
   loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)
   },
+  { path: 'product/:id', component: ProductDetailsComponent },
   {
    path:"",
    redirectTo:"/user/signup",
