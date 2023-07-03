@@ -24,5 +24,87 @@
       "password": "ram123",
       "id": 4
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Apple iPhone 14 (128 GB) - Blue",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 1."
+    },
+    {
+      "id": 2,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 2",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 2."
+    },
+    {
+      "id": 3,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 4,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 5,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 6,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 7,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 8,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 9,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    },
+    {
+      "id": 10,
+      "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+      "productName": "Product 3",
+      "originalProductPrice": 10.99,
+      "discountProductPrice": 12.99,
+      "description": "This is the description of Product 3."
+    }
   ]
 }
