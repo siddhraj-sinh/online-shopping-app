@@ -1,0 +1,14 @@
+<div class="background">
+    <div class="card">
+      <form #signup="ngForm" (ngSubmit)="registerUser()">
+        <input type="text" placeholder="Full Name" name="name" [(ngModel)]="form.name" required>
+        <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" required>
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" required>
+        <button type="submit">Sign Up</button>
+        <div class="signin-link">
+          Already have an account? <a routerLink="/user/signin">Sign In</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
