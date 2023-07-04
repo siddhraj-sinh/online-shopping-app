@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Order Summary</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.productName }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.total }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <h5>Grand Total: {{ grandTotal }}</h5>
+    </div>
+    <div class="col-md-6">
+      <h4>Checkout</h4>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea class="form-control" id="address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
