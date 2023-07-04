@@ -36,9 +36,6 @@ input {
   color: #333333;
 }
 
-
-
-
 button {
   width: 120px;
   padding: 10px;
@@ -52,6 +49,15 @@ button {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #4caf50; /* Same color as the button's background color */
+}
+
 
 button:hover {
   background-color: #45a049;

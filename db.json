@@ -23,6 +23,66 @@
       "name": "ram",
       "password": "ram123",
       "id": 4
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini",
+      "id": 5
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini",
+      "id": 6
+    },
+    {
+      "name": "nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini_123",
+      "id": 7
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandii1",
+      "id": 8
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini123",
+      "id": 9
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini123",
+      "id": 10
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini123",
+      "id": 11
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini_1234",
+      "id": 12
+    },
+    {
+      "name": "siddhu",
+      "email": "siddhu@gmail.com",
+      "password": "siddhu",
+      "id": 13
+    },
+    {
+      "name": "siddhu",
+      "email": "siddhu@gmail.com",
+      "password": "siddhu",
+      "id": 14
     }
   ],
   "products": [
