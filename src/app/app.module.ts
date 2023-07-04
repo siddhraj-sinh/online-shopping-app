@@ -7,12 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
