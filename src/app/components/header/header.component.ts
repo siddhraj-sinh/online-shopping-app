@@ -9,10 +9,15 @@ import { CartService } from 'src/app/services/cart.service';
 export class HeaderComponent implements OnInit{
 
   totalItem: number=0;  
+  userService: any;
   constructor(private cartService:CartService){}
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res)=>{
      this.totalItem = res.length;
     })
   }
+
+  displayUser(item:any){
+    this.userService.getUser(item);
+   }
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
    path:"",
    redirectTo:"/user/signup",
    pathMatch:'full'
+  },
+  {
+    path:'profile/:id',
+    component:ProfileComponent
   }
   // { path: '**', redirectTo: '' }
 ];

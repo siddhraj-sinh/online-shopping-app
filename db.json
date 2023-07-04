@@ -23,6 +23,12 @@
       "name": "ram",
       "password": "ram123",
       "id": 4
+    },
+    {
+      "name": "Satyam Singh Kushwah",
+      "email": "satyamsinghkushwah162@gmail.com",
+      "password": "123",
+      "id": 5
     }
   ],
   "products": [

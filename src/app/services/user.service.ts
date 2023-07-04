@@ -8,6 +8,13 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
+  getUser(userId: string): Observable<any> {
+    return this.http.get<any>(`${this.url}/${userId}`);
+  }
+  updateUser(userId: string, userData: any): Observable<any> {
+    return this.http.put<any>(`${this.url}/${userId}`, userData);
+  }
+
   url = "http://localhost:3000/users";
 
   addUser(user:any):Observable<any>{
