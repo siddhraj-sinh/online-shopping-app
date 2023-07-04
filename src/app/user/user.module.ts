@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'signup', pathMatch: 'full' },
+  { path: '', redirectTo: 'signin', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent },
    { path: 'signin', component: SigninComponent }
 ];
