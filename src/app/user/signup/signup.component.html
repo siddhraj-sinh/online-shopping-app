@@ -1,11 +1,27 @@
 <div class="background">
     <div class="card">
       <h2>Register</h2>
-      <form #signup="ngForm" (ngSubmit)="registerUser()">
-        <input type="text" placeholder="Full Name" name="name" [(ngModel)]="form.name" required>
-        <input type="email" placeholder="Your Email" name="email" [(ngModel)]="form.email" required>
-        <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" required>
-        <button type="submit">Sign Up</button>
+      <form #signup="ngForm" (ngSubmit)="signup.form.valid  && registerUser()">
+        
+        <input type="text" placeholder="Full Name" name="name" id="name" [(ngModel)]="form.name"  #name="ngModel" required maxlength="22" [ngClass]="{error : name.errors && name.touched}">
+        <div *ngIf="name.invalid && name.touched">
+          <small class="text-danger" *ngIf="name.errors?.['required']">First Name is required.</small>
+          <small class="text-danger" *ngIf="name.errors?.['maxlength']">Maximun 22 characters are allowed.</small>
+        </div>
+
+        <input type="email" placeholder="Your Email" name="email" id="email" [(ngModel)]="form.email" #email="ngModel" required maxlength="22" [pattern]="emailRegex">
+        <div *ngIf="email.invalid && email.touched">
+          <small class="text-danger" *ngIf="email.errors?.['required']">Email is required.</small>
+          <small class="text-danger" *ngIf="email.errors?.['maxlength']">Email should be maximun 22 character long.</small>
+          <small class="text-danger" *ngIf="email.errors?.['pattern']">Please enter a valid Email.</small>
+        </div>
+
+        <input type="password" placeholder="Password" name="password" id="password" [(ngModel)]="form.password" #password="ngModel" required>
+        <div *ngIf="password.invalid && password.touched">
+          <small class="text-danger" *ngIf="password.errors?.['required']">Password is required.</small>
+        </div>
+
+        <button type="submit" [disabled]="signup.form.invalid">Sign Up</button>
         <div class="signin-link">
           Already have an account? <a routerLink="/user/signin"><b>Sign In</b></a>
         </div>
