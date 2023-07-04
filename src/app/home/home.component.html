@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
   <div class="row">
-    <ng-container *ngFor="let item of products">
+    <ng-container *ngFor="let item of products | filter:searchKey:'productName'">
       <div class="col-md-4">
         <div class="card">
             <a [routerLink]="['/product', item.id]">  <img src="{{item.productImageUrl}}" alt=""> </a>

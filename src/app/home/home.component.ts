@@ -12,10 +12,13 @@ export class HomeComponent implements OnInit{
   constructor(private product:ProductService,private cartService:CartService){}
 
   products: any[] = [];
+  searchKey:string ="";
   ngOnInit(){
    this.loadProducts();
 
-
+   this.cartService.search.subscribe((val:any)=>{
+    this.searchKey = val;
+  })
   }
 
   loadProducts(){
