@@ -25,10 +25,64 @@
       "id": 4
     },
     {
-      "name": "Satyam Singh Kushwah",
-      "email": "satyamsinghkushwah162@gmail.com",
-      "password": "123",
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini",
       "id": 5
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini",
+      "id": 6
+    },
+    {
+      "name": "nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini_123",
+      "id": 7
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandii1",
+      "id": 8
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini123",
+      "id": 9
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini123",
+      "id": 10
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "Nandini123",
+      "id": 11
+    },
+    {
+      "name": "Nandini",
+      "email": "nandini@gmail.com",
+      "password": "nandini_1234",
+      "id": 12
+    },
+    {
+      "name": "siddhu",
+      "email": "siddhu@gmail.com",
+      "password": "siddhu",
+      "id": 13
+    },
+    {
+      "name": "siddhu",
+      "email": "siddhu@gmail.com",
+      "password": "siddhu",
+      "id": 14
     }
   ],
   "products": [
@@ -111,6 +165,43 @@
       "price": 10.99,
       "discountProductPrice": 12.99,
       "description": "This is the description of Product 3."
+    }
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "userId": 0,
+      "productIds": [
+        0
+      ]
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "id": 1,
+          "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+          "productName": "Apple iPhone 14 (128 GB) - Blue",
+          "price": 10.99,
+          "discountProductPrice": 12.99,
+          "description": "This is the description of Product 1.",
+          "quantity": 1,
+          "total": 10.99
+        },
+        {
+          "id": 2,
+          "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+          "productName": "Product 2",
+          "price": 10.99,
+          "discountProductPrice": 12.99,
+          "description": "This is the description of Product 2.",
+          "quantity": 1,
+          "total": 10.99
+        }
+      ],
+      "grandTotal": 21.98,
+      "orderDate": "4/7/2023",
+      "id": 1
     }
   ]
 }

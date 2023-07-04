@@ -1,12 +1,21 @@
 <div class="background">
 <div class="card">
   <h2>Welcome !</h2>
-  <form #signinForm="ngForm" (ngSubmit)="signInUser()">
-  <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" required>
-  <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" required>
-  <button type="submit">Sign In</button>
+  <form #signinForm="ngForm" (ngSubmit)="signinForm.form.valid  && signInUser()">
+  <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" #email="ngModel" required maxlength="22" [pattern]="emailRegex">
+  <div *ngIf="email.invalid && email.touched">
+    <small class="text-danger" *ngIf="email.errors?.['required']">First Name is required.</small>
+    <small class="text-danger" *ngIf="email.errors?.['maxlength']">Maximun 22 characters are allowed.</small>
+  </div>
+
+  <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" #password="ngModel" required>
+  <div *ngIf="password.invalid && password.touched">
+    <small class="text-danger" *ngIf="password.errors?.['required']">Password is required.</small>
+  </div>
+  
+  <button type="submit" [disabled]="signinForm.form.invalid">Sign In</button>
   <div class="signup-link">
-    Don't have an account? <a routerLink="/user/signin"><b>Sign Up </b></a>
+    Don't have an account? <a routerLink="/user/signup"><b>Sign Up </b></a>
     </div>
 </form>
 </div>

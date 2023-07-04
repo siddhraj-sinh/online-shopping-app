@@ -13,7 +13,8 @@ constructor(private user:UserService,private router:Router){}
 form = {
   email: '',
   password: ''
-};
+}
+emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
   signInUser() {
     this.user.checkUser(this.form.email, this.form.password)

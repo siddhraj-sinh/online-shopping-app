@@ -18,4 +18,8 @@ export class ProductService {
     const url = `${this.url}/${productId}`;
     return this.http.get<any>(url);
   }
+  getProductsByIds(productIds: number[]): Observable<any[]> {
+    const url = `${this.url}?id=${productIds.join(',')}`;
+    return this.http.get<any[]>(url);
+  }
 }

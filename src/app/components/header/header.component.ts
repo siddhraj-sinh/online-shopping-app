@@ -16,8 +16,4 @@ export class HeaderComponent implements OnInit{
      this.totalItem = res.length;
     })
   }
-
-  displayUser(item:any){
-    this.userService.getUser(item);
-   }
 }

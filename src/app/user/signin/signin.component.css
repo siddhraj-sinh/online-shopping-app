@@ -56,6 +56,16 @@ h2 {
   button:hover {
     background-color: #45a049;
   }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  button:disabled:hover {
+    background-color: #4caf50; /* Same color as the button's background color */
+  }
+  
   
 
   .signup-link {
