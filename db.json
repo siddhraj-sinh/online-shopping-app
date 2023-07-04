@@ -166,5 +166,42 @@
       "discountProductPrice": 12.99,
       "description": "This is the description of Product 3."
     }
+  ],
+  "orders": [
+    {
+      "id": 0,
+      "userId": 0,
+      "productIds": [
+        0
+      ]
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "id": 1,
+          "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+          "productName": "Apple iPhone 14 (128 GB) - Blue",
+          "price": 10.99,
+          "discountProductPrice": 12.99,
+          "description": "This is the description of Product 1.",
+          "quantity": 1,
+          "total": 10.99
+        },
+        {
+          "id": 2,
+          "productImageUrl": "https://m.media-amazon.com/images/I/31VjlrbE3bL._SY445_SX342_QL70_FMwebp_.jpg",
+          "productName": "Product 2",
+          "price": 10.99,
+          "discountProductPrice": 12.99,
+          "description": "This is the description of Product 2.",
+          "quantity": 1,
+          "total": 10.99
+        }
+      ],
+      "grandTotal": 21.98,
+      "orderDate": "4/7/2023",
+      "id": 1
+    }
   ]
 }
