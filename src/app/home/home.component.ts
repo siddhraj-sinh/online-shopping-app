@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +9,30 @@ import { ProductService } from '../services/product.service';
 })
 export class HomeComponent implements OnInit{
 
-  constructor(private product:ProductService){}
+  constructor(private product:ProductService,private cartService:CartService){}
 
   products: any[] = [];
+  searchKey:string ="";
   ngOnInit(){
    this.loadProducts();
+
+   this.cartService.search.subscribe((val:any)=>{
+    this.searchKey = val;
+  })
   }
 
   loadProducts(){
     this.product.loadAllProducts().subscribe((res)=>{
       console.log(res);
       this.products=res;
-    })
+
+      this.products.forEach((a:any)=>{
+        Object.assign(a,{quantity:1,total:a.price});
+      })
+    });
+  }
+
+  addToCart(item:any){
+   this.cartService.addtoCart(item);
   }
 }

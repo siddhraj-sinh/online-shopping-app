@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -14,8 +15,12 @@ const routes: Routes = [
   },
   { path: 'product/:id', component: ProductDetailsComponent },
   {
+    path:'cart',
+    component:CartComponent
+  },
+  {
    path:"",
-   redirectTo:"/user/signup",
+   redirectTo:"/user/signin",
    pathMatch:'full'
   }
   // { path: '**', redirectTo: '' }
