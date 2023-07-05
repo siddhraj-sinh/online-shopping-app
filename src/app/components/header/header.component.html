@@ -1,26 +1,45 @@
 <header>
   <nav class="navbar navbar-light bg-custom shadow-sm">
     <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 40px; color: #F8E831; margin-left: 10PX;"  class="fas fa-shipping-fast" routerLink="/home">&nbsp;</i>
-      <strong style="font-size: 30px; color: #ffffff;" routerLink="/home">My Store</strong>
+      <i
+        style="font-size: 40px; color: #f8e831; margin-left: 10px"
+        class="fas fa-shipping-fast"
+        routerLink="/home"
+        >&nbsp;</i
+      >
+      <strong style="font-size: 30px; color: #ffffff" routerLink="/home"
+        >My Store</strong
+      >
       <div class="form-group search-container">
-        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+          placeholder="search products"
+        />
         <span class="fas fa-search search-icon"></span>
       </div>
     </div>
     <!-- <button routerLink="/profile" class="btn">
       <i style="font-size: 30px;" class="fa fa-user"></i>
     </button> -->
-    <button routerLink="/order-history" class="btn order-history">
-      <i class="fa fa-history"></i>
-    </button>
 
-    <button routerLink="/cart" class="btn cart-button">
-      <i class="fas fa-cart-plus"></i>
-      <span class="badge">{{totalItem}}</span>
-    </button>
-   
+    <!-- <div> -->
+      <a routerLink="/order-history" class="btn order-history">
+        <i class="fa fa-history"></i>
+      </a>
+      
+      <a routerLink="/cart" class="btn cart-button">
+        <i class="fas fa-cart-plus"></i>
+        <span class="badge">{{ totalItem }}</span>
+      </a>
+
+      <a  (click)="signOut()" style="margin-right: 10px;" class="btn">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+
+     
+    <!-- </div> -->
   </nav>
 </header>
-
-

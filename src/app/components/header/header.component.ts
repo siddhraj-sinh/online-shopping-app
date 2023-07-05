@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit{
 
   totalItem: number=0;  
   public searchTerm !: string;
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService, private router : Router){}
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res)=>{
      this.totalItem = res.length;
@@ -20,5 +21,10 @@ export class HeaderComponent implements OnInit{
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.cartService.search.next(this.searchTerm);
+  }
+
+  signOut() {
+    localStorage.clear();
+    this.router.navigate(['/user/signin']); 
   }
 }
