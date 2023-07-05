@@ -1,8 +1,11 @@
-<app-header></app-header>
-  <ng-container *ngIf="orders.length > 0">
+  <app-header></app-header>
+  <div class="container mt-5">
+    <h2>Order History</h2>
+    <ng-container *ngIf="orders.length > 0">
       <div *ngFor="let order of orders" class="card mt-4">
         <div class="card-header">
           Order ID: {{ order.id }}
+        </div>
         <div class="card-body">
           <h5 class="card-title">Order Details</h5>
           <ul class="list-group">
@@ -13,16 +16,15 @@
                 </div>
                 <div class="col-md-10">
                   <h6>{{ item.productName }}</h6>
-                  <p>Price: {{ item.price |  currency:'USD':'symbol':'1.2-2' }}</p>
+                  <p>Price: ${{ item.price }}</p>
                   <p>Quantity: {{ item.quantity }}</p>
                 </div>
               </div>
             </li>
           </ul>
-          </div>
         </div>
         <div class="card-footer">
-          <p>Grand Total: {{ order.grandTotal|  currency:'USD':'symbol':'1.2-2' }}</p>
+          <p>Grand Total: ${{ order.grandTotal }}</p>
           <p>Date: {{ order.orderDate }}</p>
           <p>Customer Name: {{ order.customerName }}</p>
           <p>Email: {{ order.customerEmail }}</p>
@@ -31,15 +33,21 @@
         </div>
       </div>
     </ng-container>
-    <ng-container *ngIf="orders.length === 0">
-        <div class="card">
-          <h5 class="card-title">Order History</h5>
+    <ng-container *ngIf="orders.length ==0">
+      <div class="container">
+          <div class="card" style="height: 80vh;  margin: 20px; padding: 25px;">
+              <h5 class="card-title">No orders available</h5>
           </div>
           <div class="center">
-            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
-            <h4>No Orders Yet.</h4>
-            <button routerLink="/home" class="btn btn-primary">Shop Now</button>
+              <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
           </div>
-</ng-container>
+          <div class="mybtn">
+            <button routerLink="/home" class="btn btn-primary">Shop Now</button>
 
-  
+          </div>
+      </div>
+  </ng-container>
+
+    
+
+    
