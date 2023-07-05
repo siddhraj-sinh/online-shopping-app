@@ -12,6 +12,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OrderHistoryComponent } from './components/order-history/order-history.
     CartComponent,
     FilterPipe,
     CheckoutComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,

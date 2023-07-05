@@ -19,7 +19,7 @@ export class CheckoutComponent {
   products: any[] = [];
   grandTotal:number = 0;
   userId?: number | null;
-
+  orderId?: number;
   constructor(private router: Router, private cartService: CartService, private userService: UserService,private orderService:OrderService) {
     // Subscribe to the cart items from the CartService
     this.cartService.getProducts().subscribe(products => {
@@ -41,14 +41,16 @@ export class CheckoutComponent {
 
     this.orderService.addOrder(order).subscribe((res)=>{
       console.log(res);
-    })
-    // Save the order in the database (you can implement this logic)
-    // ...
-
-    // Clear the cart
+      this.orderId=res.id;
+      console.log(this.orderId);
+        // Clear the cart
     this.cartService.removeAllCart();
 
     // Navigate to the order confirmation page
-   // this.router.navigate(['/order-confirmation']);
+    this.router.navigate(['/order-confirmation', this.orderId]);
+        // Clear the cart
+    this.cartService.removeAllCart();
+    })
+  
   }
 }
