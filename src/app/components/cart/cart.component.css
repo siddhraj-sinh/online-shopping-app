@@ -48,3 +48,20 @@ h6 {
     background-color: #526D82;
     border-color: #526D82;
 }
+
+.description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    max-height: 3.6em;
+    line-height: 1.8em;
+  }
+  
+  
+  

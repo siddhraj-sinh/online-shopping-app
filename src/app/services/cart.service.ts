@@ -25,6 +25,7 @@ export class CartService {
     this.productList.next(this.cartItemList);
     this.getTotalPrice();
     console.log(this.cartItemList)
+    alert(`Would you like to add the ${product.productName} to your cart?`);
   }
   getTotalPrice() : number{
     let grandTotal = 0;

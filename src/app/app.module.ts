@@ -14,6 +14,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

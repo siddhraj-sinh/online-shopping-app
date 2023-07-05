@@ -13,13 +13,7 @@ export class OrderConfirmationComponent implements OnInit {
   expectedDeliveryDate: string = "";
 
   constructor(private router: Router,private route:ActivatedRoute,private orderService:OrderService){
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        if (event.url === '/checkout') {
-          this.router.navigate(['/home']);
-        }
-      }
-    });
+    
   }
   ngOnInit() {
   
