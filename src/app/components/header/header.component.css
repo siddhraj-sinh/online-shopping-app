@@ -65,8 +65,8 @@ header .navbar {
 }
 
 
-  .cart-button {
-    margin-right: 10px;
+.cart-button {
+    margin-left: 10px;
   }
 
 
@@ -74,11 +74,10 @@ header .navbar {
   background-color: #1e7e34;
 } 
 
-.order-history-button {
-  margin-right: 140px;
-}
 
-.order-history-button:hover {
+/* .order-history-button:hover {
   background-color: #495057;
-}
+} */
+
+
   
