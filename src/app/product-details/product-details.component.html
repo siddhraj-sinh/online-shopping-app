@@ -18,11 +18,11 @@
   </div>  
   <div class="mt-2 pr-3 content"> <p>{{ product.description }}</p>   
   </div>  
-  <h3>${{ product.price }}</h3>   
+  <h3>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</h3>   
 
    <div class="buttons d-flex flex-row mt-5 gap-3">   
     
-    <button class="btn" >Add to Cart</button> 
+    <button class="btn" (click)="addToCart(product)" >Add to Cart</button> 
     </div> 
         </div> 
          </div> 
