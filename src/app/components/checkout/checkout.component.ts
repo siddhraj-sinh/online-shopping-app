@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
+import { OrderService } from 'src/app/services/order.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-checkout',
@@ -16,23 +18,30 @@ export class CheckoutComponent {
 
   products: any[] = [];
   grandTotal:number = 0;
+  userId?: number | null;
 
-  constructor(private router: Router, private cartService: CartService) {
+  constructor(private router: Router, private cartService: CartService, private userService: UserService,private orderService:OrderService) {
     // Subscribe to the cart items from the CartService
     this.cartService.getProducts().subscribe(products => {
       this.products = products;
       this.grandTotal=this.cartService.getTotalPrice();
     });
+    this.userId = userService.getCurrentUserId();
   }
 
   placeOrder() {
     // Prepare the order object
     const order = {
-      customer: this.customer,
-      products: this.products,
-      orderDate: new Date().toISOString()
+      userId: this.userId,
+      items: this.products,
+      grandTotal:this.grandTotal,
+      orderDate:new Date().toLocaleDateString()
     };
 
+
+    this.orderService.addOrder(order).subscribe((res)=>{
+      console.log(res);
+    })
     // Save the order in the database (you can implement this logic)
     // ...
 
@@ -40,6 +49,6 @@ export class CheckoutComponent {
     this.cartService.removeAllCart();
 
     // Navigate to the order confirmation page
-    this.router.navigate(['/order-confirmation']);
+   // this.router.navigate(['/order-confirmation']);
   }
 }

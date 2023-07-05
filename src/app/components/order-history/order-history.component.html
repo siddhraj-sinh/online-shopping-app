@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <h2>Order History</h2>
+    <ng-container *ngIf="orders.length > 0">
+      <div *ngFor="let order of orders" class="card mt-4">
+        <div class="card-header">
+          Order ID: {{ order.id }}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Order Details</h5>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of order.items">
+              <div class="row">
+                <div class="col-md-2">
+                  <img src="{{ item.productImageUrl }}" alt="Product Image" class="img-fluid">
+                </div>
+                <div class="col-md-10">
+                  <h6>{{ item.productName }}</h6>
+                  <p>Price: ${{ item.price }}</p>
+                  <p>Quantity: {{ item.quantity }}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <p>Grand Total: ${{ order.grandTotal }}</p>
+          <p>Date: {{ order.orderDate }}</p>
+        </div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="orders.length === 0">
+      <p>No orders found.</p>
+    </ng-container>
+</div>
+  

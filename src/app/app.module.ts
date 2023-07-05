@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderHistoryComponent } from './components/order-history/order-history.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     HeaderComponent,
     CartComponent,
     FilterPipe,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderHistoryComponent
   ],
   imports: [
     BrowserModule,
