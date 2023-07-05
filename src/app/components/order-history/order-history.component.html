@@ -24,6 +24,10 @@
         <div class="card-footer">
           <p>Grand Total: {{ order.grandTotal|  currency:'USD':'symbol':'1.2-2' }}</p>
           <p>Date: {{ order.orderDate }}</p>
+          <p>Customer Name: {{ order.customerName }}</p>
+          <p>Email: {{ order.customerEmail }}</p>
+          <p>Address: {{ order.customerAddress }}</p>
+          <p>Phone: {{ order.customerPhone }}</p>
         </div>
       </div>
     </ng-container>

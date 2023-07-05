@@ -4,24 +4,24 @@
   <div class="row">
     <div class="col-md-6">
       <h4>Checkout</h4>
-      <form>
+      <form (ngSubmit)="placeOrder()" #checkoutForm="ngForm">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" required>
+          <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="form.name">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" required>
+          <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="form.email">
         </div>
         <div class="form-group">
           <label for="address">Address</label>
-          <textarea class="form-control" id="address" required></textarea>
+          <textarea class="form-control" id="address" name="address" required [(ngModel)]="form.address"></textarea>
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" required>
+          <input type="text" class="form-control" id="phone" name="phone" required [(ngModel)]="form.phone">
         </div>
-        <button type="submit" class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+        <button type="submit" class="btn btn-primary">Place Order</button>
       </form>
     </div>
  
@@ -47,5 +47,5 @@
       </table>
       <h5>Grand Total: {{ grandTotal | currency:'USD':'symbol':'1.2-2' }}</h5>
     </div>
-     </div>
+  </div>
 </div>

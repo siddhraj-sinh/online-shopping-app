@@ -20,6 +20,12 @@ export class CheckoutComponent {
   grandTotal:number = 0;
   userId?: number | null;
   orderId?: number;
+  form={
+    name:'',
+    email:'',
+    address:'',
+    phone:''
+  }
   constructor(private router: Router, private cartService: CartService, private userService: UserService,private orderService:OrderService) {
     // Subscribe to the cart items from the CartService
     this.cartService.getProducts().subscribe(products => {
@@ -30,9 +36,15 @@ export class CheckoutComponent {
   }
 
   placeOrder() {
+    console.log(this.form);
+
     // Prepare the order object
     const order = {
       userId: this.userId,
+      customerName:this.form.name,
+      customerEmail:this.form.email,
+      customerPhone:this.form.phone,
+      customerAddress:this.form.address,
       items: this.products,
       grandTotal:this.grandTotal,
       orderDate:new Date().toLocaleDateString()

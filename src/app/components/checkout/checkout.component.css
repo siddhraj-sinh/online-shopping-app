@@ -1,4 +1,21 @@
-
-h5{
-    margin-left: 355px;
-}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  h4, h5 {
+    margin-top: 20px;
+  }
+  
+  .btn-primary {
+    margin-top: 20px;
+  }
+  
