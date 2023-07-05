@@ -1,6 +1,7 @@
 <app-header></app-header>
-<div class="container mt-5">
-    <h2>Order History</h2>
+<div class="container">
+ 
+    <h5 class="card-title">Order History</h5>
     <ng-container *ngIf="orders.length > 0">
       <div *ngFor="let order of orders" class="card mt-4">
         <div class="card-header">
@@ -16,7 +17,7 @@
                 </div>
                 <div class="col-md-10">
                   <h6>{{ item.productName }}</h6>
-                  <p>Price: ${{ item.price }}</p>
+                  <p>Price: {{ item.price |  currency:'USD':'symbol':'1.2-2' }}</p>
                   <p>Quantity: {{ item.quantity }}</p>
                 </div>
               </div>
@@ -24,13 +25,18 @@
           </ul>
         </div>
         <div class="card-footer">
-          <p>Grand Total: ${{ order.grandTotal }}</p>
+          <p>Grand Total: {{ order.grandTotal|  currency:'USD':'symbol':'1.2-2' }}</p>
           <p>Date: {{ order.orderDate }}</p>
         </div>
       </div>
     </ng-container>
     <ng-container *ngIf="orders.length === 0">
-      <p>No orders found.</p>
+      <div class="container">
+        <div class="card">
+          <h5 class="card-title">No orders Yet</h5>
+          <button routerLink="/home" class="btn btn-primary">Shop Now</button>
+      </div>
+      </div>
     </ng-container>
 </div>
   
