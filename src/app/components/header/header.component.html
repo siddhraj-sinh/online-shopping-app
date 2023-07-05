@@ -1,8 +1,9 @@
 <header>
   <nav class="navbar navbar-light bg-custom shadow-sm">
     <div class="navbar-brand align-item-center d-flex">
-      <i style="font-size: 40px;" class="fas fa-shipping-fast" routerLink="/home">&nbsp;</i>
-      <strong style="font-size: 30px;" routerLink="/home">My Store</strong>
+      <i style="font-size: 40px; color: #F8E831;" class="fas fa-shipping-fast" routerLink="/home"></i>
+
+      <strong style="font-size: 30px;" routerLink="/home">ShopExpress</strong>
       <div class="form-group search-container">
         <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search products">
         <span class="fas fa-search search-icon"></span>

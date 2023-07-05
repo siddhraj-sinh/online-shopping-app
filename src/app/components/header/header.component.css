@@ -1,29 +1,35 @@
-header .navbar {
-  background-color: #5eb2b3;
-  color: white;
-}
-
 .bg-custom {
-  background-color: #5eb2b3 !important;
+  background-color: #047BD5 !important;
 }
-
 
 .form-control {
-    border-radius: 3px;
-    width: 600px;
-    margin-left: 20px;
-  }
-  
-  .search-container {
-    position: relative;
-  }
-  
-  .search-icon {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    cursor: pointer;
-  }
-  
+  border-radius: 3px;
+  width: 600px;
+  margin-left: 20px;
+  color: white; /* Set text color to white */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #047BD5; /* Set icon color to white */
+  cursor: pointer;
+}
+
+.navbar-brand strong {
+  color: white; /* Set text color to white */
+}
+
+.btn i {
+  color: white; /* Set icon color to white */
+}
+
+.badge.bg-danger {
+  color: white; /* Set badge text color to white */
+}
