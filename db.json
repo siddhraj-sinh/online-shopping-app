@@ -59,6 +59,12 @@
       "email": "nandini@gmail.com",
       "password": "Nandini123",
       "id": 10
+    },
+    {
+      "name": "chirag",
+      "email": "chirag@gmail.com",
+      "password": "123456",
+      "id": 11
     }
   ],
   "products": [

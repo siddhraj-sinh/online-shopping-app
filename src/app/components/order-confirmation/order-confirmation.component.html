@@ -1,56 +1,69 @@
-<app-header></app-header>
+  <app-header></app-header>
 
-<div class="container mt-5">
-  <h2>Thank You for Your Order!</h2>
-  <p>Here are the details of your order:</p>
+  <div class="container mt-5">
+    <div class="customer-info">
+      <h4>Customer Information</h4>
+      <p><strong>Name:</strong> {{ orderDetails.customerName }}</p>
+      <p><strong>Email:</strong> {{ orderDetails.customerEmail }}</p>
+      <p><strong>Address:</strong> {{ orderDetails.customerAddress }}</p>
+      <p><strong>Phone Number:</strong> {{ orderDetails.customerPhone }}</p>
+    </div>
+    <h2>Thank You for Your Order!</h2>
+    <p>Here are the details of your order:</p>
 
-  <div class="card">
-    <div class="card-header">
-      <div class="row">
-        <div class="col-md-6">
-          Order Invoice
+    <div class="card">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-10">
+            Order Invoice
+          </div>
+          <div class="col-md-2">
+            <h5>Order Date:</h5>
+            <p class="text-right">{{ orderDetails.orderDate }}</p>
+          </div>
         </div>
-        <div class="col-md-6 text-right">
-          <h5>Order Date:</h5>
-          <p class="text-right">{{ orderDetails.orderDate }}</p>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Product Name</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Quantity</th>
+                <th class="text-right">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Loop through the ordered items and display their details -->
+              <tr *ngFor="let item of orderDetails.items">
+                <td>{{ item.productName }}</td>
+                <td class="text-right">{{ item.price | currency:'USD':'symbol':'1.2-2'}}</td> <!-- Include $ sign for price -->
+                <td class="text-right">{{ item.quantity }}</td>
+                <td class="text-right">{{ item.total | currency:'USD':'symbol':'1.2-2'}}</td> <!-- Include $ sign for total -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row mt-4">
+          <div style="text-align: end;">
+            <h5 style="margin-right: 30px;">Grand Total:    <span>{{ orderDetails.grandTotal | currency:'USD':'symbol':'1.2-2'}}</span> </h5>
+         <!-- Include $ sign for grand total -->
+          </div>
         </div>
       </div>
     </div>
-    <div class="card-body">
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Product Name</th>
-              <th class="text-right">Price</th>
-              <th class="text-right">Quantity</th>
-              <th class="text-right">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Loop through the ordered items and display their details -->
-            <tr *ngFor="let item of orderDetails.items">
-              <td>{{ item.productName }}</td>
-              <td class="text-right">${{ item.price }}</td> <!-- Include $ sign for price -->
-              <td class="text-right">{{ item.quantity }}</td>
-              <td class="text-right">${{ item.total }}</td> <!-- Include $ sign for total -->
-            </tr>
-          </tbody>
-        </table>
-      </div>
 
-      <div class="row mt-4">
-        <div class="col-md-6">
-          <h5>Grand Total:</h5>
-          <p class="text-right">${{ orderDetails.grandTotal }}</p> <!-- Include $ sign for grand total -->
-        </div>
+    <div class="row">
+      <div class="col-md-10">
+        <h4 class="mt-5">Expected Delivery Date:</h4>
+        <p>Your order is expected to be delivered within two-three days</p>
+      </div>
+      <div class="col-md-2">
+        <a routerLink="/home" class="btn btn-primary mt-5">Shop More</a>
       </div>
     </div>
+
+    <!-- Shop More link -->
   </div>
-
-  <h4 class="mt-5">Expected Delivery Date:</h4>
-  <p>Your order is expected to be delivered on {{ expectedDeliveryDate }}</p>
-
-  <!-- Shop More link -->
-  <a routerLink="/home" class="btn btn-primary">Shop More</a>
-</div>
