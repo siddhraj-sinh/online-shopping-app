@@ -11,12 +11,13 @@
     <!-- <button routerLink="/profile" class="btn">
       <i style="font-size: 30px;" class="fa fa-user"></i>
     </button> -->
-    <button routerLink="/order-history" class="btn">
-      <i style="font-size: 25px; color: #ffffff;" class="fa fa-history"></i>
+    <button routerLink="/order-history" class="btn order-history">
+      <i class="fa fa-history"></i>
     </button>
-    <button routerLink="/cart" class="btn">
-      <i style="font-size: 25px; color: #ffffff;" class="fas fa-cart-plus"></i>
-      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+
+    <button routerLink="/cart" class="btn cart-button">
+      <i class="fas fa-cart-plus"></i>
+      <span class="badge">{{totalItem}}</span>
     </button>
    
   </nav>
