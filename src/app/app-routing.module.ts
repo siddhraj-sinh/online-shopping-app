@@ -5,8 +5,14 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 const routes: Routes = [
+  {
+    path:"",
+    redirectTo:"/user/signin",
+    pathMatch:'full'
+   },
   {
    path:"home",
    component:HomeComponent
@@ -27,11 +33,10 @@ const routes: Routes = [
   {
     path:'order-history',
     component:OrderHistoryComponent
-  },
+  }, 
   {
-   path:"",
-   redirectTo:"/user/signin",
-   pathMatch:'full'
+   path:'order-confirmation/:id',
+   component:OrderConfirmationComponent
   }
   // { path: '**', redirectTo: '' }
 ];
