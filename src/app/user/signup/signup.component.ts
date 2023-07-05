@@ -22,7 +22,7 @@ export class SignupComponent {
     console.log(this.form);
   this.user.addUser(this.form).subscribe(res=>{
     console.log(res);
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/user/signin');
   });
 
   }
