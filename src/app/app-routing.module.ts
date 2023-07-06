@@ -6,6 +6,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { authGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -24,11 +25,13 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductDetailsComponent },
   {
     path:'cart',
-    component:CartComponent
+    component:CartComponent,
+  
   },
   {
     path:'checkout',
-    component:CheckoutComponent
+    component:CheckoutComponent,
+    canActivate: [authGuard],
   },
   {
     path:'order-history',

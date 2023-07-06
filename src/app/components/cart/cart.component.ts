@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   products:any[]=[];
   grandTotal:number = 0;
-  constructor(private cartService:CartService){}
+  constructor(private cartService:CartService,private router:Router){}
   ngOnInit(): void {
    
     this.cartService.getProducts().subscribe((res)=>{
@@ -34,5 +35,8 @@ export class CartComponent implements OnInit {
       this.cartService.updateCartItemQuantity(item, item.quantity - 1);
       this.grandTotal = this.cartService.getTotalPrice();
     }
+  }
+  navigateToCheckout(){
+     this.router.navigate(['/checkout']);
   }
 }

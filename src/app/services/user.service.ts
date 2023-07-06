@@ -41,4 +41,8 @@ export class UserService {
   clearCurrentUser() {
     localStorage.removeItem(this.currentUserKey); // Remove user ID from local storage
   }
+
+  isLoggedIn(): boolean {
+    return !!this.getCurrentUserId(); // Check if user ID exists in local storage
+  }
 }
