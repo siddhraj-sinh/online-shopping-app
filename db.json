@@ -156,38 +156,6 @@
       "productIds": [
         0
       ]
-    },
-    {
-      "userId": 4,
-      "customerName": "Siddharajsinh Rathod",
-      "customerEmail": "contact.developer.siddharaj@gmail.com",
-      "customerPhone": "08154953144",
-      "customerAddress": "Block number-66, house number-654\nparthbhumi-1, GIDC road, makarpura",
-      "items": [
-        {
-          "id": 1,
-          "productImageUrl": "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_UY218_.jpg",
-          "productName": "Apple iPhone 14 (128 GB) - Blue",
-          "price": 159,
-          "discountProductPrice": 149,
-          "description": "The iPhone 14 boasts a gorgeous all-screen Liquid Retina LCD that is water resistant up to 2 metres for up to 30 minutes. Moreover, the ultra-wide 13 mm lens has a 120-degree field of view for four times more scenes, and the 26 mm wide lens provides up to 100% Autofocus in low light.",
-          "quantity": 2,
-          "total": 318
-        },
-        {
-          "id": 2,
-          "productImageUrl": "https://m.media-amazon.com/images/I/617MPEZB5mL._AC_UY218_.jpg",
-          "productName": "OnePlus Nord 2T 5G (Gray Shadow, 8GB RAM, 128GB Storage)",
-          "price": 379,
-          "discountProductPrice": 359,
-          "description": "Combining powerful performance with a user-friendly experience, the OnePlus Nord 2T 5G Smartphone is a must-have. It boasts up to 16.33 cm (6.43) AMOLED display with a resolution of up to 1080x2400p, ensuring sharp and clear images. In addition, the screen supports HDR10+ and has a refresh rate of up to 90 Hz, providing an immersive viewing experience. Furthermore, the high-performance camera setup of the smartphone allows for capturing stunning selfies, and it supports 1080p video recording at up to 30 fps.",
-          "quantity": 1,
-          "total": 379
-        }
-      ],
-      "grandTotal": 697,
-      "orderDate": "7/6/2023",
-      "id": 1
     }
   ]
 }
