@@ -24,4 +24,15 @@ export class CartComponent implements OnInit {
   emptycart(){
     this.cartService.removeAllCart();
   }
+  increaseQuantity(item: any) {
+    //this.cartService.updateCartItemQuantity(item, item.quantity + 1);
+    this.cartService.updateCartItemQuantity(item, item.quantity + 1);
+    this.grandTotal = this.cartService.getTotalPrice();
+  }
+  decreaseQuantity(item:any){
+    if (item.quantity > 1) {
+      this.cartService.updateCartItemQuantity(item, item.quantity - 1);
+      this.grandTotal = this.cartService.getTotalPrice();
+    }
+  }
 }
