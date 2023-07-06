@@ -24,7 +24,11 @@
                             <td><img style="width: 120px;" src="{{item.productImageUrl}}" alt=""></td>
                             <td style="width: 25%;">{{item.description}}</td>
                             <th style="width: 12%;">{{item.price | currency:'USD':'symbol':'1.2-2'}}</th>
-                            <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">  <div class="quantity-control">
+                                <button (click)="decreaseQuantity(item)" class="btn btn-secondary btn-sm">-</button>
+                                <span>{{ item.quantity }}</span>
+                                <button (click)="increaseQuantity(item)" class="btn btn-secondary btn-sm">+</button>
+                              </div></td>
                             <td style="width: 12%;">{{item.total | currency:'USD':'symbol':'1.2-2'}}</td>
                             <td>
                                 <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>

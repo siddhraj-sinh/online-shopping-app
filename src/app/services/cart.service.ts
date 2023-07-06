@@ -46,4 +46,12 @@ export class CartService {
     this.cartItemList = []
     this.productList.next(this.cartItemList);
   }
+  updateCartItemQuantity(product: any, quantity: number) {
+    const item = this.cartItemList.find((item: any) => item.id === product.id);
+    if (item) {
+      item.quantity = quantity;
+      item.total = item.price * quantity;
+      this.productList.next(this.cartItemList);
+    }
+  }
 }
