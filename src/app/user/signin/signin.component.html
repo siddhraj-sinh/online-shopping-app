@@ -1,19 +1,18 @@
 <div class="background">
 <div class="card">
   <h2>Welcome !</h2>
-  <form #signinForm="ngForm" (ngSubmit)="signinForm.form.valid  && signInUser()">
-  <input type="email" placeholder="Email" name="email" [(ngModel)]="form.email" #email="ngModel" required maxlength="22" [pattern]="emailRegex">
-  <div *ngIf="email.invalid && email.touched">
-    <small class="text-danger" *ngIf="email.errors?.['required']">First Name is required.</small>
-    <small class="text-danger" *ngIf="email.errors?.['maxlength']">Maximun 22 characters are allowed.</small>
-  </div>
-
-  <input type="password" placeholder="Password" name="password" [(ngModel)]="form.password" #password="ngModel" required>
-  <div *ngIf="password.invalid && password.touched">
-    <small class="text-danger" *ngIf="password.errors?.['required']">Password is required.</small>
-  </div>
+  <form [formGroup]="signinForm" (ngSubmit)="signInUser()">
+    
+    
+     
   
-  <button type="submit" [disabled]="signinForm.form.invalid">Sign In</button>
+    <input type="email" placeholder="Email" class="form-control" formControlName="email" [ngClass]="{'error': getControl('email')?.errors && getControl('email')?.touched}">
+    <span *ngIf="getControl('email')?.errors && getControl('email')?.touched" style="color: red;">Invalid Email Id.</span>
+
+  <input type="password" placeholder="Password" name="password" formControlName="password" [ngClass]="{'error': getControl('password')?.errors && getControl('password')?.touched}">
+  <span *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red;">Password is Invalid</span>
+  
+  <button type="submit" [disabled]="signinForm.invalid">Sign In</button>
   <div class="signup-link">
     Don't have an account? <a routerLink="/user/signup"><b>Sign Up </b></a>
     </div>
