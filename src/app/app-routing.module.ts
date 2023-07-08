@@ -8,6 +8,7 @@ import { OrderHistoryComponent } from './components/order-history/order-history.
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { authGuard } from './services/auth.guard';
 import { ProfileComponent } from './components/profile/profile.component';
+import { CanDeactivateGuardService } from './services/deactivate-guard.services';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
     path:'checkout',
     component:CheckoutComponent,
     canActivate: [authGuard],
+    canDeactivate:[CanDeactivateGuardService]
   },
   {
     path:'order-history',
