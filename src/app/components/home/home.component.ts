@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   searchKey:string ="";
   filterForm!: FormGroup;
   categoryFilterControl: FormControl = new FormControl('');
-  sortFilterControl: FormControl = new FormControl('');
+  sortFilterControl: FormControl = new FormControl('select');
 
   ngOnInit(){
    this.loadProducts();
