@@ -1,6 +1,6 @@
 import { Component,OnInit  } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder,FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
@@ -12,17 +12,17 @@ export class ProfileComponent implements OnInit{
   profileForm!: FormGroup;
   currentUser: any;
 
-  constructor(private formBuilder: FormBuilder,private userService:UserService,private router:Router){}
+  constructor(private userService:UserService,private router:Router){}
 
   ngOnInit(): void {
     this.initializeForm();
     this.getCurrentUser();
   }
   initializeForm() {
-    this.profileForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+    this.profileForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', Validators.required)
     });
   }
 
@@ -44,6 +44,10 @@ export class ProfileComponent implements OnInit{
       console.log(this.currentUser);
      
     }
+  }
+
+  getControl(name:any):AbstractControl | null{
+    return this.profileForm.get(name);
   }
 
   updateProfile() {

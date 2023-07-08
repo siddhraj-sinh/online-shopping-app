@@ -5,15 +5,20 @@
     <h2>Edit Profile</h2>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" id="name" formControlName="name" class="form-control" />
+      <input type="text" id="name" formControlName="name" class="form-control"  [ngClass]="{'error': getControl('name')?.errors && getControl('name')?.touched}"/>
+      <span *ngIf="getControl('name')?.errors && getControl('name')?.touched" style="color: red;">Name is required.</span>
     </div>
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" id="email" formControlName="email" class="form-control" />
+      <input type="email" id="email" formControlName="email" class="form-control"  [ngClass]="{'error': getControl('email')?.errors && getControl('email')?.touched}" />
+      <span *ngIf="getControl('email')?.errors?.['required'] && getControl('email')?.touched" style="color: red;">Email is required.</span>
+      <span *ngIf="getControl('email')?.errors?.['email']" style="color: red;">Please enter a valid email address.</span>
+      
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" id="password" formControlName="password" class="form-control" />
+      <input type="password" id="password" formControlName="password" class="form-control"  [ngClass]="{'error': getControl('password')?.errors && getControl('password')?.touched}" />
+      <span *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red;">Password is required.</span>
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
   </form>
