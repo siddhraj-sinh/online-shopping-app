@@ -65,6 +65,12 @@
       "email": "chirag@gmail.com",
       "password": "123456",
       "id": 11
+    },
+    {
+      "name": "Aswathy Anil",
+      "email": "aswathy1638@gmail.com",
+      "password": "123",
+      "id": 12
     }
   ],
   "products": [
