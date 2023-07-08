@@ -15,6 +15,7 @@ import { OrderHistoryComponent } from './components/order-history/order-history.
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CanDeactivateGuardService } from './services/deactivate-guard.services';
+import { SortByPipePipe } from './shared/sort-by-pipe.pipe';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { CanDeactivateGuardService } from './services/deactivate-guard.services'
     CheckoutComponent,
     OrderHistoryComponent,
     OrderConfirmationComponent,
-    ProfileComponent
+    ProfileComponent,
+    SortByPipePipe
   ],
   imports: [
     BrowserModule,
