@@ -45,4 +45,13 @@ export class UserService {
   isLoggedIn(): boolean {
     return !!this.getCurrentUserId(); // Check if user ID exists in local storage
   }
+
+  updateUserDetails(userId: number, updatedUser: any): Observable<any> {
+    const url = `${this.url}/${userId}`;
+    return this.http.put(url, updatedUser);
+  }
+  getUserById(userId: number): Observable<any> {
+    const url = `${this.url}/${userId}`;
+    return this.http.get(url);
+  }
 }
