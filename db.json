@@ -156,6 +156,28 @@
       "productIds": [
         0
       ]
+    },
+    {
+      "userId": 4,
+      "customerName": "Siddharajsinh Rathod",
+      "customerEmail": "contact.developer.siddharaj@gmail.com",
+      "customerPhone": "08154953144",
+      "customerAddress": "Block number-66, house number-654\nparthbhumi-1, GIDC road, makarpura",
+      "items": [
+        {
+          "id": 1,
+          "productImageUrl": "https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_UY218_.jpg",
+          "productName": "Apple iPhone 14 (128 GB) - Blue",
+          "price": 159,
+          "discountProductPrice": 149,
+          "description": "The iPhone 14 boasts a gorgeous all-screen Liquid Retina LCD that is water resistant up to 2 metres for up to 30 minutes. Moreover, the ultra-wide 13 mm lens has a 120-degree field of view for four times more scenes, and the 26 mm wide lens provides up to 100% Autofocus in low light.",
+          "quantity": 2,
+          "total": 318
+        }
+      ],
+      "grandTotal": 318,
+      "orderDate": "7/6/2023",
+      "id": 1
     }
   ]
 }
