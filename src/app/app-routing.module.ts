@@ -35,7 +35,8 @@ const routes: Routes = [
   },
   {
     path:'order-history',
-    component:OrderHistoryComponent
+    component:OrderHistoryComponent,
+    canActivate: [authGuard]
   }, 
   {
    path:'order-confirmation/:id',
