@@ -16,6 +16,7 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
 import { ProfileComponent } from './components/profile/profile.component';
 import { CanDeactivateGuardService } from './services/deactivate-guard.services';
 import { SortByPipePipe } from './shared/sort-by-pipe.pipe';
+import { CategoryFilterPipe } from './shared/category-filter.pipe';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SortByPipePipe } from './shared/sort-by-pipe.pipe';
     OrderHistoryComponent,
     OrderConfirmationComponent,
     ProfileComponent,
-    SortByPipePipe
+    SortByPipePipe,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,
