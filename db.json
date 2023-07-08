@@ -180,11 +180,11 @@
       "id": 1
     },
     {
-      "userId": 4,
-      "customerName": "siddhraj",
-      "customerEmail": "s@gmail.com",
-      "customerPhone": "08154953144",
-      "customerAddress": "vadodara",
+      "userId": 7,
+      "customerName": "Nandini",
+      "customerEmail": "nandini@gmail.com",
+      "customerPhone": "1234455",
+      "customerAddress": "nadiad",
       "items": [
         {
           "id": 1,
@@ -198,7 +198,7 @@
         }
       ],
       "grandTotal": 159,
-      "orderDate": "8/7/2023",
+      "orderDate": "7/8/2023",
       "id": 2
     }
   ]
