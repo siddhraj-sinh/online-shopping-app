@@ -4,27 +4,44 @@
   <div class="row">
     <div class="col-md-6">
       <h4>Checkout</h4>
-      <form (ngSubmit)="placeOrder()" #checkoutForm="ngForm">
+      <form [formGroup]="checkoutForm" (ngSubmit)="placeOrder()">
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="form.name">
+          <input type="text" class="form-control" id="name" formControlName="name" [ngClass]="{'error': getControl('name')?.errors && getControl('name')?.touched}">
+          <div  style="color: red;" *ngIf="checkoutForm.get('name')?.invalid && (checkoutForm.get('name')?.dirty || checkoutForm.get('name')?.touched)">
+            <div style="color: red;" *ngIf="checkoutForm.get('name')?.errors?.['required'] && (checkoutForm.get('name')?.dirty || checkoutForm.get('name')?.touched)">
+              Name is required.
+            </div>
+          </div>
+          
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="form.email">
+          <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{'error': getControl('email')?.errors && getControl('email')?.touched}">
+          <div style="color: red;"  *ngIf="checkoutForm.get('email')?.invalid && (checkoutForm.get('email')?.dirty || checkoutForm.get('email')?.touched)">
+            <div style="color: red;"  *ngIf="checkoutForm.get('email')?.errors?.['required']">Email is required.</div>
+            <div style="color: red;" *ngIf="checkoutForm.get('email')?.errors?.['email']">Invalid email format.</div>
+
+          </div>
         </div>
         <div class="form-group">
           <label for="address">Address</label>
-          <textarea class="form-control" id="address" name="address" required [(ngModel)]="form.address"></textarea>
+          <textarea class="form-control" id="address" formControlName="address" [ngClass]="{'error': getControl('address')?.errors && getControl('address')?.touched}"></textarea>
+          <div style="color: red;" *ngIf="checkoutForm.get('address')?.invalid && (checkoutForm.get('address')?.dirty || checkoutForm.get('address')?.touched)">
+            <div style="color: red;" *ngIf="checkoutForm.get('address')?.errors?.['required']">Address is required.</div>
+          </div>
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" name="phone" required [(ngModel)]="form.phone">
+          <input type="text" class="form-control" id="phone" formControlName="phone" [ngClass]="{'error': getControl('phone')?.errors && getControl('phone')?.touched}">
+          <div  style="color: red;" *ngIf="checkoutForm.get('phone')?.invalid && (checkoutForm.get('phone')?.dirty || checkoutForm.get('phone')?.touched)">
+            <div style="color: red;"  *ngIf="checkoutForm.get('phone')?.errors?.['required']">Phone is required.</div>
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Place Order</button>
+        <button type="submit" class="btn btn-primary" [disabled]="checkoutForm.invalid">Place Order</button>
       </form>
     </div>
- 
+
     <div class="col-md-6">
       <h4>Order Summary</h4>
       <table class="table">
@@ -37,14 +54,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products">
-            <td>{{ product.productName }}</td>
-            <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
-            <td>{{ product.quantity }}</td>
-            <td>{{ product.total |  currency:'USD':'symbol':'1.2-2' }}</td>
-          </tr>
+          <ng-container *ngIf="products.length > 0">
+            <tr *ngFor="let product of products">
+              <td>{{ product.productName }}</td>
+              <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>{{ product.total | currency:'USD':'symbol':'1.2-2' }}</td>
+            </tr>
+          </ng-container>
         </tbody>
       </table>
+      <h5 *ngIf="products.length === 0">No products available.</h5>
       <h5>Grand Total: {{ grandTotal | currency:'USD':'symbol':'1.2-2' }}</h5>
     </div>
   </div>
