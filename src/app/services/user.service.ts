@@ -48,10 +48,11 @@ export class UserService {
 
   updateUserDetails(userId: number, updatedUser: any): Observable<any> {
     const url = `${this.url}/${userId}`;
+    alert('are you sure want to update your profile details ?')
     return this.http.put(url, updatedUser);
   }
-  getUserById(userId: number): Observable<any> {
-    const url = `${this.url}/${userId}`;
+  getUserById(id: number): Observable<any> {
+    const url = `${this.url}/${id}`;
     return this.http.get(url);
   }
 }

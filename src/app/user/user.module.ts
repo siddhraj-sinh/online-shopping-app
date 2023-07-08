@@ -5,21 +5,19 @@ import { Routes,RouterModule } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from '../components/profile/profile.component';
 import { authGuard } from '../services/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'signin', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent },
-   { path: 'signin', component: SigninComponent },
-   {path:'profile',component:ProfileComponent,canActivate:[authGuard]}
+   { path: 'signin', component: SigninComponent }
 ];
 
 @NgModule({
   declarations: [
     SignupComponent,
-    SigninComponent,
-    ProfileComponent
+    SigninComponent
   ],
   imports: [
     CommonModule,
@@ -27,6 +25,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
-  ]
+  ],
+  exports:[]
 })
 export class UserModule { }

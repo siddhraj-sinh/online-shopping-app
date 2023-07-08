@@ -7,6 +7,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 import { authGuard } from './services/auth.guard';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -41,7 +42,8 @@ const routes: Routes = [
   {
    path:'order-confirmation/:id',
    component:OrderConfirmationComponent
-  }
+  },
+   {path:'profile',component:ProfileComponent,canActivate:[authGuard]}
   // { path: '**', redirectTo: '' }
 ];
 

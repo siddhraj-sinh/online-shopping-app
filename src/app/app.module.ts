@@ -13,6 +13,7 @@ import { FilterPipe } from './shared/filter.pipe';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { OrderHistoryComponent } from './components/order-history/order-history.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
     FilterPipe,
     CheckoutComponent,
     OrderHistoryComponent,
-    OrderConfirmationComponent
+    OrderConfirmationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

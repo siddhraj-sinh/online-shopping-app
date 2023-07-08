@@ -1,6 +1,7 @@
 import { Component,OnInit  } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -11,7 +12,7 @@ export class ProfileComponent implements OnInit{
   profileForm!: FormGroup;
   currentUser: any;
 
-  constructor(private formBuilder: FormBuilder,private userService:UserService){}
+  constructor(private formBuilder: FormBuilder,private userService:UserService,private router:Router){}
 
   ngOnInit(): void {
     this.initializeForm();
@@ -27,15 +28,21 @@ export class ProfileComponent implements OnInit{
 
   getCurrentUser() {
     const userId = this.userService.getCurrentUserId();
+    console.log(userId);
     if (userId) {
-      this.currentUser = this.userService.getUserById(userId); // Implement this method in the UserService to fetch user details by ID
-      if (this.currentUser) {
-        this.profileForm.patchValue({
-          name: this.currentUser.name,
-          email: this.currentUser.email,
-          password: '' // Leave password field blank for security reasons
-        });
-      }
+      this.currentUser = this.userService.getUserById(userId).subscribe((res)=>{
+        console.log(res);
+        if (this.currentUser) {
+          this.currentUser=res;
+          this.profileForm.patchValue({
+            name: this.currentUser.name,
+            email: this.currentUser.email,
+            password: this.currentUser.password // Leave password field blank for security reasons
+          });
+        }
+      }); // Implement this method in the UserService to fetch user details by ID
+      console.log(this.currentUser);
+     
     }
   }
 
@@ -51,10 +58,8 @@ export class ProfileComponent implements OnInit{
       if (userId) {
         this.userService.updateUserDetails(userId, updatedUser).subscribe(() => {
           // Handle success
+          this.router.navigate(['/home']);
           console.log('Profile updated successfully!');
-        }, (error) => {
-          // Handle error
-          console.error('Failed to update profile:', error);
         });
       }
     }
