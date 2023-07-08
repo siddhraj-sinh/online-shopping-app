@@ -54,4 +54,7 @@ export class CartService {
       this.productList.next(this.cartItemList);
     }
   }
+  isCartEmpty():boolean{
+    return this.cartItemList.length > 0;
+  }
 }
