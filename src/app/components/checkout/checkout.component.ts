@@ -34,7 +34,7 @@ export class CheckoutComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       address: ['', Validators.required],
-      phone: ['', Validators.required]
+      phone: ['', [Validators.required, Validators.pattern(/^\d+$/)]]
     });
 
     this.userId = userService.getCurrentUserId();
