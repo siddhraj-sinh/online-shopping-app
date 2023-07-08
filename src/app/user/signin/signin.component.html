@@ -7,10 +7,11 @@
      
   
     <input type="email" placeholder="Email" class="form-control" formControlName="email" [ngClass]="{'error': getControl('email')?.errors && getControl('email')?.touched}">
-    <span *ngIf="getControl('email')?.errors && getControl('email')?.touched" style="color: red;">Invalid Email Id.</span>
-
+    <span *ngIf="getControl('email')?.errors?.['required'] && getControl('email')?.touched" style="color: red;">Email is required.</span>
+      <span *ngIf="getControl('email')?.errors?.['email']" style="color: red;">Please enter a valid email address.</span>
+      
   <input type="password" placeholder="Password" name="password" formControlName="password" [ngClass]="{'error': getControl('password')?.errors && getControl('password')?.touched}">
-  <span *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red;">Password is Invalid</span>
+  <span *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red;">Password is required.</span>
   
   <button type="submit" [disabled]="signinForm.invalid">Sign In</button>
   <div class="signup-link">
