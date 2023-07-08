@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 import { OrderService } from 'src/app/services/order.service';
 import { UserService } from 'src/app/services/user.service';
+import { FormBuilder, FormGroup, Validators,FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -10,6 +11,13 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
+  loginForm= new FormGroup({
+    user : new FormControl('',[Validators.required]),
+    password : new FormControl('',[Validators.required,Validators.email]),
+    address : new FormControl('',Validators.required),
+    phone : new FormControl('',[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")])
+  })
+  
   customer = {
     name: '',
     address: '',
@@ -26,7 +34,7 @@ export class CheckoutComponent {
     address:'',
     phone:''
   }
-  constructor(private router: Router, private cartService: CartService, private userService: UserService,private orderService:OrderService) {
+  constructor(private formBuilder :FormBuilder,private router: Router, private cartService: CartService, private userService: UserService,private orderService:OrderService) {
     // Subscribe to the cart items from the CartService
     this.cartService.getProducts().subscribe(products => {
       this.products = products;
@@ -34,6 +42,13 @@ export class CheckoutComponent {
     });
     this.userId = userService.getCurrentUserId();
   }
+loginUser(){
+  console.warn(this.loginForm.value)
+}
+  
+getControl(name:any):AbstractControl | null{
+  return this.loginForm.get(name);
+}
 
   placeOrder() {
     console.log(this.form);

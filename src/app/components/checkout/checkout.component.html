@@ -1,51 +1,51 @@
 <app-header></app-header>
-
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-6">
-      <h4>Checkout</h4>
-      <form (ngSubmit)="placeOrder()" #checkoutForm="ngForm">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="form.name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="form.email">
-        </div>
-        <div class="form-group">
-          <label for="address">Address</label>
-          <textarea class="form-control" id="address" name="address" required [(ngModel)]="form.address"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input type="text" class="form-control" id="phone" name="phone" required [(ngModel)]="form.phone">
-        </div>
-        <button type="submit" class="btn btn-primary">Place Order</button>
-      </form>
-    </div>
- 
-    <div class="col-md-6">
-      <h4>Order Summary</h4>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Product Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let product of products">
-            <td>{{ product.productName }}</td>
-            <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
-            <td>{{ product.quantity }}</td>
-            <td>{{ product.total |  currency:'USD':'symbol':'1.2-2' }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <h5>Grand Total: {{ grandTotal | currency:'USD':'symbol':'1.2-2' }}</h5>
-    </div>
-  </div>
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" class="form-control"placeholder="Enter name" formControlName="user">
+  <br>
+ <span style="color: red ;" *ngIf="getControl('user') && getControl('user')?.invalid && getControl('user')?.touched">invalid</span>
+<br>
+<input type="text" class="form-control"placeholder="Enter email" formControlName="password">
+  <br>
+ <span style="color: red ;" *ngIf="getControl('password') && getControl('password')?.invalid && getControl('password')?.touched">invalid Email</span>
+ <br>
+
+ <textarea type="text" class="form-control"placeholder="Enter address" formControlName="address"></textarea>
+  <br>
+ <span style="color: red ;" *ngIf="getControl('address') && getControl('address')?.invalid && getControl('address')?.touched">invalid Address Field</span>
+ <br>
+ <input type="text" class="form-control"placeholder="Enter Phone Number" formControlName="phone">
+  <br>
+ <span style="color: red ;" *ngIf="getControl('phone') && getControl('phone')?.invalid && getControl('phone')?.touched">invalid Phone Number</span>
+ <br>
+ <button [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">Place Order</button>
+</form>
 </div>
+<div class="col-md-6">
+  <h4>Order Summary</h4>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productName }}</td>
+        <td>{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.total |  currency:'USD':'symbol':'1.2-2' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5>Grand Total: {{ grandTotal | currency:'USD':'symbol':'1.2-2' }}</h5>
+</div>
+</div>
+</div>
+
