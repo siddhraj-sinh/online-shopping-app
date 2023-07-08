@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,10 @@ export class HomeComponent implements OnInit{
 
   products: any[] = [];
   searchKey:string ="";
+  filterForm!: FormGroup;
+  categoryFilterControl: FormControl = new FormControl('');
+  sortFilterControl: FormControl = new FormControl('');
+
   ngOnInit(){
    this.loadProducts();
 

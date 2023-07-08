@@ -9,6 +9,7 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
 import { authGuard } from './services/auth.guard';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CanDeactivateGuardService } from './services/deactivate-guard.services';
+import { cartAuthGuard } from './services/cart-auth.guard';
 
 const routes: Routes = [
   {
@@ -33,7 +34,7 @@ const routes: Routes = [
   {
     path:'checkout',
     component:CheckoutComponent,
-    canActivate: [authGuard],
+    canActivate: [authGuard,cartAuthGuard],
     canDeactivate:[CanDeactivateGuardService]
   },
   {

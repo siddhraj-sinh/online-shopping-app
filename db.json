@@ -80,7 +80,8 @@
       "productName": "Apple iPhone 14 (128 GB) - Blue",
       "price": 159,
       "discountProductPrice": 149,
-      "description": "The iPhone 14 boasts a gorgeous all-screen Liquid Retina LCD that is water resistant up to 2 metres for up to 30 minutes. Moreover, the ultra-wide 13 mm lens has a 120-degree field of view for four times more scenes, and the 26 mm wide lens provides up to 100% Autofocus in low light."
+      "description": "The iPhone 14 boasts a gorgeous all-screen Liquid Retina LCD that is water resistant up to 2 metres for up to 30 minutes. Moreover, the ultra-wide 13 mm lens has a 120-degree field of view for four times more scenes, and the 26 mm wide lens provides up to 100% Autofocus in low light.",
+      "category": "Phones"
     },
     {
       "id": 2,
@@ -88,7 +89,8 @@
       "productName": "OnePlus Nord 2T 5G (Gray Shadow, 8GB RAM, 128GB Storage)",
       "price": 379,
       "discountProductPrice": 359,
-      "description": "Combining powerful performance with a user-friendly experience, the OnePlus Nord 2T 5G Smartphone is a must-have. It boasts up to 16.33 cm (6.43) AMOLED display with a resolution of up to 1080x2400p, ensuring sharp and clear images. In addition, the screen supports HDR10+ and has a refresh rate of up to 90 Hz, providing an immersive viewing experience. Furthermore, the high-performance camera setup of the smartphone allows for capturing stunning selfies, and it supports 1080p video recording at up to 30 fps."
+      "description": "Combining powerful performance with a user-friendly experience, the OnePlus Nord 2T 5G Smartphone is a must-have. It boasts up to 16.33 cm (6.43) AMOLED display with a resolution of up to 1080x2400p, ensuring sharp and clear images. In addition, the screen supports HDR10+ and has a refresh rate of up to 90 Hz, providing an immersive viewing experience. Furthermore, the high-performance camera setup of the smartphone allows for capturing stunning selfies, and it supports 1080p video recording at up to 30 fps.",
+      "category": "Phones"
     },
     {
       "id": 3,
@@ -96,7 +98,8 @@
       "productName": "OnePlus 11R 5G (Galactic Silver, 256 GB)  (16 GB RAM)",
       "price": 799,
       "discountProductPrice": 725,
-      "description": "You can enjoy sophisticated smartphone features with the OnePlus 11R 5G Smartphone. It is equipped with the advanced MTK Dimensity 8100-MAX chipset, which provides enhanced thermal control, reduced power consumption, and a seamless user experience for browsing, streaming, and gaming. In addition, its up to 17.02 cm (6.7) 120 Hz FHD fluid display with adaptive frame rate technology ensures a smooth scrolling experience. Moreover, this smartphone's display comes equipped with adaptive frame rate technology, which enables it to seamlessly switch between 60 Hz, 90 Hz, and up to 120 Hz."
+      "description": "You can enjoy sophisticated smartphone features with the OnePlus 11R 5G Smartphone. It is equipped with the advanced MTK Dimensity 8100-MAX chipset, which provides enhanced thermal control, reduced power consumption, and a seamless user experience for browsing, streaming, and gaming. In addition, its up to 17.02 cm (6.7) 120 Hz FHD fluid display with adaptive frame rate technology ensures a smooth scrolling experience. Moreover, this smartphone's display comes equipped with adaptive frame rate technology, which enables it to seamlessly switch between 60 Hz, 90 Hz, and up to 120 Hz.",
+      "category": "Phones"
     },
     {
       "id": 4,
@@ -104,7 +107,8 @@
       "productName": "Samsung Galaxy F13 (Waterfall Blue,4GB RAM, 128GB Storage)",
       "price": 79,
       "discountProductPrice": 65,
-      "description": "Enjoy seamless connectivity and an uninterrupted movie marathon with the impressive Samsung Galaxy F13 that is designed specifically to impress the entertainment fanatics. This smartphone features a terrific 16.62 cm (6.6) FHD+ LCD Display that can effortlessly blow your mind with its incredible performance. Furthermore, this phone boasts a 50 MP Triple Camera setup that allows you to capture awesomeness with a gentle tap. Moreover, the Samsung Galaxy F13 sports up to 8 GB of RAM and features an innovative RAM plus technology that taps into the phone’s internal storage to elevate its performance."
+      "description": "Enjoy seamless connectivity and an uninterrupted movie marathon with the impressive Samsung Galaxy F13 that is designed specifically to impress the entertainment fanatics. This smartphone features a terrific 16.62 cm (6.6) FHD+ LCD Display that can effortlessly blow your mind with its incredible performance. Furthermore, this phone boasts a 50 MP Triple Camera setup that allows you to capture awesomeness with a gentle tap. Moreover, the Samsung Galaxy F13 sports up to 8 GB of RAM and features an innovative RAM plus technology that taps into the phone’s internal storage to elevate its performance.",
+      "category": "Phones"
     },
     {
       "id": 5,
@@ -112,7 +116,8 @@
       "productName": "SAMSUNG Galaxy Z Fold4 5G (Phantom Black, 256 GB)  (12 GB RAM)",
       "price": 1349,
       "discountProductPrice": 1299,
-      "description": "With the Samsung Galaxy Z Fold4 5G's impressive selection of unique apps, you can fold your way through a challenging workday and maintain productivity. The magnificent 19.21 cm (7.6) main screen and 15.73 cm (6.2) cover screen on this phone make multitasking effortless and improve efficiency. Furthermore, you can capture mesmerising photos with excellent images owing to the professional-grade camera system included in this phone. Additionally, the outstanding 120 Hz refresh rate on this phone offers stutter-free gaming and an immaculate user experience."
+      "description": "With the Samsung Galaxy Z Fold4 5G's impressive selection of unique apps, you can fold your way through a challenging workday and maintain productivity. The magnificent 19.21 cm (7.6) main screen and 15.73 cm (6.2) cover screen on this phone make multitasking effortless and improve efficiency. Furthermore, you can capture mesmerising photos with excellent images owing to the professional-grade camera system included in this phone. Additionally, the outstanding 120 Hz refresh rate on this phone offers stutter-free gaming and an immaculate user experience.",
+      "category": "Phones"
     },
     {
       "id": 6,
@@ -120,7 +125,8 @@
       "productName": "Apple iPhone 13 Mini (128GB) - Pink",
       "price": 119,
       "discountProductPrice": 100,
-      "description": "iPhone 13. boasts an advanced dual-camera system that allows you to click mesmerising pictures with immaculate clarity. Furthermore, the lightning-fast A15 Bionic chip allows for seamless multitasking, elevating your performance to a new dimension. A big leap in battery life, a durable design, and a bright Super Retina XDR display facilitate boosting your user experience."
+      "description": "iPhone 13. boasts an advanced dual-camera system that allows you to click mesmerising pictures with immaculate clarity. Furthermore, the lightning-fast A15 Bionic chip allows for seamless multitasking, elevating your performance to a new dimension. A big leap in battery life, a durable design, and a bright Super Retina XDR display facilitate boosting your user experience.",
+      "category": "Phones"
     },
     {
       "id": 7,
@@ -128,7 +134,8 @@
       "productName": "Redmi Note 12 5G Mystique Blue 6GB RAM 128GB ROM",
       "price": 291,
       "discountProductPrice": 285,
-      "description": "You can enjoy high-speed internet connectivity, low latency, and powerful performance with the Redmi Note 12 5G Smartphone. It allows for uninterrupted internet connectivity with its dual 5G SIM support. And, thanks to its up to 16.94 cm (6.67) 120 Hz Super AMOLED display, this smartphone offers exceptional picture quality with sharp details. Also, the display boasts deep blacks and vibrant colour reproduction, providing an immersive experience for movie viewing.."
+      "description": "You can enjoy high-speed internet connectivity, low latency, and powerful performance with the Redmi Note 12 5G Smartphone. It allows for uninterrupted internet connectivity with its dual 5G SIM support. And, thanks to its up to 16.94 cm (6.67) 120 Hz Super AMOLED display, this smartphone offers exceptional picture quality with sharp details. Also, the display boasts deep blacks and vibrant colour reproduction, providing an immersive experience for movie viewing..",
+      "category": "Phones"
     },
     {
       "id": 8,
@@ -136,7 +143,8 @@
       "productName": "Vivo Y100A 5G (Metal Black, 8GB RAM, 256GB Storage)",
       "price": 199,
       "discountProductPrice": 159,
-      "description": "With the superb Vivo Y100A 5G, you can take advantage of great pictures and a flawless user experience. With the Vivo Y100A 5G, you can experience exceptional performance owing to its 7 nm 5G CPU, the octa-core Dimensity 6020, with a top clock speed of 2.2 GHz. Additionally, the 50 MP main camera on this smartphone beautifully catches every detail you see. Additionally, Super Night Selfie employs noise cancellation technology in conjunction with an Aura Screen Light to produce a calming light that is effective in low light. The pioneering Extended RAM 3.0 technology also uses ROM to expand RAM with a maximum capacity of 8 GB. This enables smooth app switching and allows up to 27 active applications to run in the background."
+      "description": "With the superb Vivo Y100A 5G, you can take advantage of great pictures and a flawless user experience. With the Vivo Y100A 5G, you can experience exceptional performance owing to its 7 nm 5G CPU, the octa-core Dimensity 6020, with a top clock speed of 2.2 GHz. Additionally, the 50 MP main camera on this smartphone beautifully catches every detail you see. Additionally, Super Night Selfie employs noise cancellation technology in conjunction with an Aura Screen Light to produce a calming light that is effective in low light. The pioneering Extended RAM 3.0 technology also uses ROM to expand RAM with a maximum capacity of 8 GB. This enables smooth app switching and allows up to 27 active applications to run in the background.",
+      "category": "Phones"
     },
     {
       "id": 9,
@@ -144,7 +152,8 @@
       "productName": "Oppo F23 5G (Cool Black, 8GB RAM, 256GB Storage)",
       "price": 89,
       "discountProductPrice": 79,
-      "description": "With a massive 67 W SUPERVOOC charger that can charge up to 50% in 18 minutes, this phone is a game changer. The super powerful 5000 mAh battery will help run your phone all day for unlimited usage. 8 GB of RAM allows for a smooth and lag-free experience, letting you effortlessly switch between multiple applications. With a 120 Hz refresh rate, you will be able to use the phone swiftly and smoothly. This phone has dual stereo surround speakers that are sure to elevate your entertainment experience. Your photography skills are enhanced with the 64 MP AI camera that produces stunning, clear images while auto-adjusting brightness."
+      "description": "With a massive 67 W SUPERVOOC charger that can charge up to 50% in 18 minutes, this phone is a game changer. The super powerful 5000 mAh battery will help run your phone all day for unlimited usage. 8 GB of RAM allows for a smooth and lag-free experience, letting you effortlessly switch between multiple applications. With a 120 Hz refresh rate, you will be able to use the phone swiftly and smoothly. This phone has dual stereo surround speakers that are sure to elevate your entertainment experience. Your photography skills are enhanced with the 64 MP AI camera that produces stunning, clear images while auto-adjusting brightness.",
+      "category": "Phones"
     },
     {
       "id": 10,
@@ -152,7 +161,26 @@
       "productName": "Google Pixel 7 Pro (Obsidian, 128 GB) (12 GB RAM)",
       "price": 849,
       "discountProductPrice": 829,
-      "description": "Experience smooth operation and brilliant user interface with the 5G-ready Google Pixel 7 Pro smartphone that comes loaded with breathtaking features. Google Tensor G2 makes Pixel 7 faster, more efficient, and more secure and it delivers even more helpful features. Furthermore, the Pixel 7 Pro triple rear camera system includes a 5x telephoto lens. The upgraded ultrawide lens with autofocus now powers Macro Focus. Also, the Pixel 7 Pro has a 30x Super Res Zoom for high-quality photos from far away. Moreover, the Pixel 7 Pro's 17.018 cm (6.7) Smooth Display makes everything stunning and immersive. It intelligently adjusts up to 120 Hz for smoother, more responsive performance."
+      "description": "Experience smooth operation and brilliant user interface with the 5G-ready Google Pixel 7 Pro smartphone that comes loaded with breathtaking features. Google Tensor G2 makes Pixel 7 faster, more efficient, and more secure and it delivers even more helpful features. Furthermore, the Pixel 7 Pro triple rear camera system includes a 5x telephoto lens. The upgraded ultrawide lens with autofocus now powers Macro Focus. Also, the Pixel 7 Pro has a 30x Super Res Zoom for high-quality photos from far away. Moreover, the Pixel 7 Pro's 17.018 cm (6.7) Smooth Display makes everything stunning and immersive. It intelligently adjusts up to 120 Hz for smoother, more responsive performance.",
+      "category": "Phones"
+    },
+    {
+      "id": 11,
+      "productImageUrl": "https://m.media-amazon.com/images/I/71pNnnaOIzS._UY741_.jpg",
+      "productName": "Lyned Mens Cotton Half Sleeve Striped Polo T Shirt with Collar",
+      "price": 797,
+      "discountProductPrice": 829,
+      "description": "100% Pure Cotton; Premium Export Quality Branded T-shirt; Unique Collection to your wardrobe casuals a hit of effortless cool with this best-looking t shirt",
+      "category": "Clothing"
+    },
+    {
+      "id": 11,
+      "productImageUrl": "https://m.media-amazon.com/images/I/61kmzpCNphL._SY425_.jpg",
+      "productName": "Yellow Face: The instant #1 Sunday Times bestseller and Summer 2023’s most anticipated new thriller from author R.F. Kuang",
+      "price": 288,
+      "discountProductPrice": 829,
+      "description": "The No. 1 Sunday Times and New York Times bestselling book from literary sensation R.F. Kuang",
+      "category": "Books"
     }
   ],
   "orders": [
