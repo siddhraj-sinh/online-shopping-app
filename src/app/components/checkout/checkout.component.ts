@@ -79,4 +79,21 @@ export class CheckoutComponent implements OnInit {
   getControl(name:any):AbstractControl | null{
     return this.checkoutForm.get(name);
   }
+  canExit(): boolean {
+    if (this.isFormEmpty()) {
+      return confirm('You have unsaved changes. Do you really want to discard these changes?');
+    }
+    return true;
+  }
+  
+   isFormEmpty(): boolean {
+    const formValues = this.checkoutForm.value;
+    return (
+      formValues.name === '' &&
+      formValues.email === '' &&
+      formValues.address === '' &&
+      formValues.phone === ''
+    );
+  }
+  
 }
