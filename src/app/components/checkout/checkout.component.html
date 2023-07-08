@@ -35,6 +35,7 @@
           <label for="phone">Phone</label>
           <input type="text" class="form-control" id="phone" formControlName="phone" [ngClass]="{'error': getControl('phone')?.errors && getControl('phone')?.touched}">
           <div  style="color: red;" *ngIf="checkoutForm.get('phone')?.invalid && (checkoutForm.get('phone')?.dirty || checkoutForm.get('phone')?.touched)">
+            <div style="color: red;" *ngIf="checkoutForm.get('phone')?.errors?.['pattern']">Phone must be a number.</div>
             <div style="color: red;"  *ngIf="checkoutForm.get('phone')?.errors?.['required']">Phone is required.</div>
           </div>
         </div>
